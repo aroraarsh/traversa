@@ -6,7 +6,9 @@ import os
 # Initialize Flask app
 app = Flask(__name__)
 
-openai.api_key = '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'
+load_dotenv()
+
+openai.api_key = os.getenv("REACT_APP_API_KEY")
 
 # Initialize Flask app
 app = Flask(__name__)
